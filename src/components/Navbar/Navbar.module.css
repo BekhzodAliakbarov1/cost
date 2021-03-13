@@ -1,0 +1,228 @@
+.main{
+    width: 100%;
+    height: 80px;
+    margin: 0px;
+    padding: 0px;
+    background: transparent;
+    position: fixed;
+    z-index: 100;
+    transition: all 1s ease;
+    border-bottom: 1px solid #ffcd00;
+}
+.mainScroll{
+    transition: all 1s ease;
+    width: 100%;
+    height: 80px;
+    margin: 0px;
+    padding: 0px;
+    background: #fff;
+    position: fixed;
+    z-index: 100;
+    border-bottom: 1px solid #ffcd00;
+}
+.container{
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+.images{
+    display: flex;
+    width: 220px;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+/* This place is for logo style if you want to put image you firstly stile it but if you want to put just text it will style automatically */
+ .logo{
+    height: 40px;
+    min-width: 190px;
+    background-position: center;
+    background-size: cover;
+}
+
+.links{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+.main .links a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 800;
+    position: relative;
+    color: #ffcd00;
+    text-transform: capitalize;
+    transition: all 1s ease;
+}
+.mainScroll .links a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 800;
+    position: relative;
+    color: #000;
+    text-transform: capitalize;
+    transition: all 1s ease;
+}
+.links a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 0%;
+    background-color: #ffcd00;
+    transition: all 1s ease;
+    left: 0;
+}
+.links a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 1px;
+    width: 0%;
+    background-color: #ffcd00;
+    transition: all 1s ease;
+    right: 0;
+}
+.links a:hover::after, .links a:hover::before{
+    width: 70%;
+    transition: all 1s ease;
+}
+.links:hover{
+    color: blanchedalmond;
+}
+.mainPhone{
+    display: none;
+}
+.mainPhoneScroll{
+    display: none;
+}
+@media screen and (max-width: 860px){
+    .main{
+        display: none;
+        position: fixed;
+        z-index: 100;
+    }
+    .mainScroll{
+        display: none;
+    }
+    .mainPhone{
+        position: fixed;
+        z-index: 100;
+        display: block;
+        width: 100%;
+        min-height: 70px;
+        background: transparent;
+        transition: all 1s ease;     
+        border-bottom: 1px solid #ffcd00;
+    }
+    .mainPhoneScroll{
+        position: fixed;
+        z-index: 100;
+        display: block;
+        width: 100%;
+        min-height: 70px;
+        background: #fff;
+        transition: all 1s ease;
+        border-bottom: 1px solid #ffcd00;
+
+    }
+    .containerPhone{
+        width: 80%;
+        margin: auto;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .containerPhone svg{
+        fill: #ffcd00;
+        cursor: pointer;
+    }
+    .containerPhone a{
+        text-decoration: none;
+        color: #fff;
+        font-weight: 300;
+        font-size: 18px;
+        text-transform: lowercase;
+    }
+    .linksPhone{
+        background:#f9f9f9;
+        color:#ffcd00;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        overflow: hidden;
+        transition: all 1s ease;
+    }
+    .linksPhone.clicked{
+        width: 100%;
+        height: 80vh;
+        right: 0;
+        position: absolute;
+    }
+    .linksPhone.clicked a{
+        opacity: 1;
+        transition: all 1s ease;
+        text-transform: capitalize;
+    }
+    .linksPhone.nonclicked a{
+        opacity: 0;
+        transition: all.6s ease;
+        text-transform: capitalize;
+    }
+    .linksPhone.nonclicked{
+        width: 0%;
+        height: 0vh;
+        overflow: hidden;
+        left: 0;
+        position: absolute;
+    }
+    .linksPhone a{
+        font-size: 14px;
+        font-weight: 300;
+        width: 100%;
+        height: 19%;
+        color: #000;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .linksPhone a::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 3px;
+        width: 0%;
+        background-color: #ffcd00;
+        transition: all 1s ease;
+        left: 0%;
+    }
+    .linksPhone a::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 3px;
+        width: 0%;
+        background-color: #ffcd00;
+        transition: all 1s ease;
+        right: 0%;
+    }
+    .linksPhone a:hover::after{
+        width: 70%;
+        transition: all 1s ease;
+    }
+    .linksPhone a:hover::before{
+        width: 70%;
+        transition: all 1s ease;
+    }
+    .linksPhone a:hover{
+        color: #ffcd00;
+        background-color: rgb(42, 42, 40);
+    }
+}
