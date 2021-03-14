@@ -12,9 +12,10 @@ function Footer() {
         }}>
             <h3 style={{
                     color: '#e8e8e8',
-                    fontSize: '12px'
+                    fontSize: '12px',
+                    padding: '5px'
             }}>
-                Copyright ©2021 All rights reserved | This template is made with  HBBH 
+                Copyright ©2021 All rights reserved <br /><br /> This template is made with  HBBH 
             </h3>
         </div>
     )

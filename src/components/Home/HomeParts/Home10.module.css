@@ -1,7 +1,7 @@
 .main{
     width: 100%;
     background: #f5f5f5;
-    min-height: 40vh;
+    min-height: 30vh;
 }
 .container{
     width: 90%;
@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    min-height: 40vh;
+    min-height: 30vh;
     padding: 20px 0px;
 }
 .image{

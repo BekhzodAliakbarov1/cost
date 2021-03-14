@@ -9,7 +9,6 @@ const navbarLinks = [
     {path:'/projects', name:'Projects'},
     {path:'/services', name:'Services'},
     {path:'/about', name:'About Us'},
-    {path:'/blog', name:'Blog'},
     {path:'/contact', name:'Contact'},
 ]
 
