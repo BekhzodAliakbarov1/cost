@@ -1,5 +1,6 @@
 .main{
-    width: 100%;
+    width: calc(100% - 250px);
+    margin-left: 250px;
     min-height: 20vh;
     background: #ffcd00;
 }
@@ -26,7 +27,7 @@
     background-repeat: no-repeat;
 }
 .container > div h2{
-    font-size: 22px;
+    font-size: 12px;
     font-family: open sans,sans-serif;
     font-weight: 300;
     color: #444;
@@ -51,5 +52,11 @@
     }
     .container > div h2{
         font-size: 16px;
+    }
+}
+@media screen and (max-width: 770px){
+    .main{
+        width: 100%;
+        margin: 0px;
     }
 }

@@ -14,7 +14,7 @@ import Home9 from './HomeParts/Home9'
 function Home() {
     return (
         <Fragment>
-            <Home1 mainHeader= 'We are WeBuilder' title='We innovate'/>
+            <Home1 mainHeader= 'С НАМИ ЗАБОТ МЕНЬШЕ!' title='Главный'/>
             <Home2 />
             <Home3 />
             <Home4 />

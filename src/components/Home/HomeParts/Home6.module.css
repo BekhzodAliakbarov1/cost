@@ -1,5 +1,6 @@
 .main{
-    width: 100%;
+    width: calc(100% - 250px);
+    margin-left: 250px;
     min-height: 50vh;
     background-position: center;
     background-size: cover;
@@ -100,5 +101,11 @@
     .main p{
         width: 80%;
         font-size: 15px;
+    }
+}
+@media screen and (max-width: 770px){
+    .main{
+        width: 100%;
+        margin: 0px;
     }
 }

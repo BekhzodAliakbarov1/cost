@@ -1,0 +1,24 @@
+.main{
+    width: calc(100%-250px);
+    margin-left: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main h1{
+    font-size: 50px;
+    color: #ffcd00;
+    text-align: center;
+}
+@media screen and (max-width: 770px){
+    .main{
+        width: 100%;
+        margin: 0px;
+    }
+    .main h1{
+        text-align: center;
+        font-size: 30px;
+        color: #ffcd00;
+    }
+}

@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import style from './Contact1.module.css'
-import img from '../../../assets/images/l-news-1.jpg'
 
 
 function Contact1() {
@@ -19,40 +18,38 @@ function Contact1() {
     return (
         <div className={style.main}>
             <div className={style.container}>
-                <div className={style.img} style={{backgroundImage: `url(${img})`}}>
-                    
-                </div>
+                
                 <div className={style.form}>
-                    <h1>CONTACT US</h1>
+                    <h1>КОНТАКТЫ</h1>
                     <form onSubmit={submitted}>
                         <input 
                             type="text" 
                             name="Name" 
-                            placeholder='Your Name' 
+                            placeholder='Ваше Имя' 
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                         />
                         <input 
                             type="email" 
                             name="Email" 
-                            placeholder='Your Email' 
+                            placeholder='Ваш адрес электронной почты ' 
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
                         <input 
                             type="text" 
                             name="Subject" 
-                            placeholder='Subject' 
+                            placeholder='Предмет' 
                             value={subject}
                             onChange={(e) => setSubject(e.target.value)}
                         />
                         <textarea 
-                            placeholder='Your Message' 
+                            placeholder='Ваше сообщение' 
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
                             >
                         </textarea>
-                        <button type="submit">Send</button>
+                        <button type="submit">Отправить</button>
                     </form>
                 </div>
             </div>

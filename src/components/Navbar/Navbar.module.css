@@ -3,7 +3,7 @@
     height: 80px;
     margin: 0px;
     padding: 0px;
-    background: transparent;
+    background: rgb(38, 42, 49);
     position: fixed;
     z-index: 100;
     transition: all 1s ease;
@@ -15,7 +15,7 @@
     height: 80px;
     margin: 0px;
     padding: 0px;
-    background: #fff;
+    background: rgb(38, 42, 49);
     position: fixed;
     z-index: 100;
     border-bottom: 1px solid #ffcd00;
@@ -59,10 +59,10 @@
 }
 .mainScroll .links a{
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 800;
     position: relative;
-    color: #000;
+    color: #ffcd00;
     text-transform: capitalize;
     transition: all 1s ease;
 }
@@ -99,7 +99,7 @@
 .mainPhoneScroll{
     display: none;
 }
-@media screen and (max-width: 860px){
+@media screen and (max-width: 770px){
     .main{
         display: none;
         position: fixed;
@@ -113,7 +113,7 @@
         z-index: 100;
         display: block;
         width: 100%;
-        min-height: 70px;
+        min-height: 80px;
         background: transparent;
         transition: all 1s ease;     
         border-bottom: 1px solid #ffcd00;
@@ -123,8 +123,8 @@
         z-index: 100;
         display: block;
         width: 100%;
-        min-height: 70px;
-        background: #fff;
+        min-height:80px;
+        background: #f9f9f9;
         transition: all 1s ease;
         border-bottom: 1px solid #ffcd00;
 

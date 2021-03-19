@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 .main{
-    width: 100%;
+    width: calc(100% - 250px);
+    margin-left: 250px;
     background-color: #1e2126;
     padding: 25px 0px;
 }
@@ -60,6 +61,10 @@
     transition: all 1s ease;
 }
 @media screen and (max-width:771px){
+    .main{
+        width: 100%;
+        margin: 0px;
+    }
     .main h1{
         font-size: 18px;
     }

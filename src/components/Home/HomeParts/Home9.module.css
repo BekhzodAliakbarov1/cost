@@ -1,5 +1,6 @@
 .main{
-    width: 100%;
+    width: calc(100% - 250px);
+    margin-left: 250px;
     height: 100%;
     padding: 50px 0px;
 }
@@ -103,6 +104,12 @@
     }
     .image{
         min-height: 50vh;
+    }
+}
+@media screen and (max-width: 770px){
+    .main{
+        width: 100%;
+        margin: 0px;
     }
 }
 @media screen and (max-width: 500px){

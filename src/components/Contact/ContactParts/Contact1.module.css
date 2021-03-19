@@ -1,5 +1,6 @@
 .main{
-    width: 100%;
+    width: calc(100%-250px);
+    margin-left: 250px;
     min-height: 80vh;
     box-sizing: border-box;
     padding-top: 10vh;
@@ -17,7 +18,7 @@
     background-size: cover;
 }
 .form{
-    width: 45%;
+    width: 90%;
     min-height: 60vh;
 }
 .form h1{
@@ -55,6 +56,12 @@ textarea{
     outline: none;
     cursor: pointer;
     color: #fff;
+}
+@media screen and (max-width: 770px){
+    .main{
+        width: 100%;
+        margin: 0px;
+    }
 }
 @media screen and (max-width:700px){
     .container{

@@ -1,8 +1,8 @@
 .main{
-    width: 100%;
+    width: calc(100%-250px);
     min-height: 80vh;
     box-sizing: border-box;
-    margin: 0px;
+    margin-left: 250px;
     padding: 20px 0px;
 }
 .container{
@@ -193,6 +193,12 @@
     .card .image{
         background-size: cover;
         height: 65vh;
+    }
+}
+@media screen and (max-width:770px){
+    .main{
+        width: 100%;
+        margin: 0px;
     }
 }
 @media screen and (max-width:500px){

@@ -1,0 +1,32 @@
+.main{
+    padding-top: 100px;
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    min-height: 100vh;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.container h1{
+    text-align: center;
+    font-size: 30px;
+    color: #ffcd00;
+    padding: 20px 0px;
+    letter-spacing: 4px;
+}
+.container p{
+    width: 100%;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+    color: rgb(12,23,34);
+    letter-spacing: 0.1rem;
+    padding: 10px 0px;
+}
+@media screen and (max-width:770px){
+    .main{
+        width: 100%;
+        margin: 0px;
+    }
+}

@@ -8,7 +8,7 @@ import About1 from './AboutParts/About1'
 function About() {
     return (
         <Fragment>
-            <Home1 mainHeader= 'We are WeBuilder' title='About Us'/>
+            <Home1 mainHeader= 'С НАМИ ЗАБОТ МЕНЬШЕ!' title='Категория'/>
             <Home3 />
             <About1 />
             <Home7 />

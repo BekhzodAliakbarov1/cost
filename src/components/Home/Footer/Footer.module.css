@@ -1,0 +1,21 @@
+.main{
+    display:flex;
+    align-items:center ;
+    width:calc(100% - 250px); 
+    height: 10vh;
+    background-color:#262a31;
+    text-align:center;
+    justify-content:center;
+    margin-left:250px
+}
+.main h3{
+    color: #e8e8e8;
+    font-size: 12px;
+    padding: 5px
+}
+@media screen and (max-width: 770px){
+    .main{
+        width: 100%;
+        margin: 0px;
+    }
+}

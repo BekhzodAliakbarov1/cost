@@ -1,0 +1,131 @@
+.main{
+    display: none;
+}
+@media screen and (max-width: 770px){
+    .main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        z-index: 99;
+        /* top: 80px; */
+    }
+    .btn{
+        background-color: transparent;
+        width: 60px;
+        height: 60px;
+        position: fixed;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 80px;
+        z-index: 100
+    }
+    .btn svg{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        animation: animateSVG 1s ease both infinite;
+        fill: #ffcd00;
+    }
+    .view{
+        display: flex;
+        transition: all 1s ease;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding-top: 100px;
+        background-color: rgb(38, 42, 49);
+        position: fixed;
+        z-index: 99;
+    }
+    .inMain{
+        display: none;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+        align-items: center;
+        height: 100%;
+        padding: 20px 0px;
+        
+    }
+    .flexCards{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+    .head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        padding-right: 10px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    
+    }
+    .head h2{
+        font-size: 20px;
+        line-height: 35px;
+        font-weight: bolder;
+        padding-left: 10px;
+    
+    }
+    .icon{
+        width: 14px;
+        height: 14px;
+        background-size: cover;
+        padding-right: 10px;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        width: 100%;
+        margin: 0;
+        padding-left: 10px;
+        transition: all 0.5s ease ;
+    }
+    .text a{
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: normal;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        text-decoration: none;
+    }
+    .text p:hover {
+        color: #ffcd00;
+    }
+}
+@keyframes animateSVG {
+    0%,100% {
+        transform: scale(1);
+        opacity: 1;
+    }50%{
+        transform: scale(1.3);
+        opacity: .4;
+    }
+}

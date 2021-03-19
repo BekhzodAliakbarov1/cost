@@ -1,8 +1,9 @@
 .main{
-    width: 100%;
+    width: calc(100% - 250px);
+    margin-left: 250px;
     min-height: 80vh;
     box-sizing: border-box;
-    margin: 0px;
+    /* margin: 0px; */
     padding: 20px;
 }
 .container{
@@ -43,7 +44,7 @@
 }
 .image{
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -103,22 +104,22 @@
     padding: 10px;
 }
 @media screen and (max-width:1200px){
-    /* .cards{
+    .cards{
         flex-direction: column;
-    } */
+    }
     .card{
-        width: 30%;
+        width: 60%;
         margin: 10px 10px;
     }
 }
 @media screen and (max-width:900px){
     .cards{
         flex-direction: column;
-        width: 50%;
+        width: 100%;
         margin: auto;
     }
     .image{
-        height: 50vh;
+        height: 30vh;
     }
     .card{
         width: 100%;
@@ -131,15 +132,21 @@
         font-size: 16px;
     }
 }
+@media screen and (max-width: 770px){
+    .main{
+        width: 100%;
+        margin: 0px;
+    }
+}
 @media screen and (max-width:600px){
     .container{
         width: 100%;
     }
     .cards{
-        width: 70%;
+        width: 100%;
     }
     .card .image{
         background-size: cover;
-        height: 65vh;
+        height: 30vh;
     }
 }

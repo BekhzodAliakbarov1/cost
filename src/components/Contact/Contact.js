@@ -7,7 +7,7 @@ import Contact1 from './ContactParts/Contact1'
 function Contact() {
     return (
         <Fragment>
-            <Home1 mainHeader= 'We are WeBuilder' title='Contact'/>
+            <Home1 mainHeader= 'С НАМИ ЗАБОТ МЕНЬШЕ!' title='Контакты'/>
             <Contact1 />
             <Home11 />
         </Fragment>

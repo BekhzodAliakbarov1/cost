@@ -53,7 +53,7 @@ function Home7() {
                                         <h2>{card.job}</h2>
                                         <div className={style.button}>
                                             <div className={style.background}></div>
-                                            <Link to='/form'>Get A quote</Link>
+                                            <Link to='/booked'>Get A quote</Link>
                                         </div>
                                     </div>
                                 </div>

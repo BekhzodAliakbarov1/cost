@@ -1,6 +1,7 @@
 .main{
-    width: 100%;
-    height: 100vh;
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    height: 100%;
     padding-top: 70px;
     padding-bottom: 10px;
 }
@@ -38,14 +39,15 @@
 }
 .second{
     width: 60%;
-    height: 100%;
+    height: 100vh;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 @media screen and (max-width:1200px){
     .main{
-        width: 100%;
+        width: calc(100% - 250px);
+        margin-left: 250px;
         height: 100%;
         padding-top: 70px;
         padding-bottom: 10px;
@@ -67,5 +69,11 @@
 @media screen and (max-width: 800px){
     .second{
         background-size: contain;
+    }
+}
+@media screen and (max-width: 770px){
+    .main{
+        width: 100%;
+        margin: 0px;
     }
 }

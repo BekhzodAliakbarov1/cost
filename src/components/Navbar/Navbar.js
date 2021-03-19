@@ -5,11 +5,11 @@ import {VscChromeClose, VscMenu} from 'react-icons/vsc'
 import img from '../../assets/images/logo.png'
 
 const navbarLinks = [
-    {path:'/', name:'Home'},
-    {path:'/projects', name:'Projects'},
-    {path:'/services', name:'Services'},
-    {path:'/about', name:'About Us'},
-    {path:'/contact', name:'Contact'},
+    {path:'/main', name:'Главная'},
+    {path:'/categories', name:'Категории'},
+    {path:'/booked', name:'Заказать'},
+    {path:'/message', name:'Чат'},
+    {path:'/contact', name:'Контакты'},
 ]
 
 function Navbar() {
@@ -33,10 +33,9 @@ function Navbar() {
             <div className={scroll ? `${style.mainScroll}`: `${style.main}`}>
                 <div className={style.container}>
                     <div className={style.images}>
-                        {/* <div className={style.logoCow} style={{backgroundImage:`url(${img1})`}}>
-
-                        </div> */}
-                        <div className={style.logo} style={{backgroundImage: `url(${img})`}}></div>
+                        <Link to='/'>
+                            <div className={style.logo} style={{backgroundImage: `url(${img})`}}></div>
+                        </Link>
                     </div>
                     <div className={style.links}>
                         {
@@ -53,9 +52,18 @@ function Navbar() {
             </div>
         )
     }
+    const setClassName = () => {
+        if(scroll){
+            return `${style.mainPhoneScroll}`
+        }else if(clicked){
+            return `${style.mainPhoneScroll}`
+        }else{
+            return `${style.mainPhone}`
+        }
+    }
     const navbarMobile =() => {
         return(
-            <div className={scroll ? `${style.mainPhoneScroll}` : `${style.mainPhone}`}>
+            <div className={setClassName()}>
                 <div className={style.containerPhone}>
                     <div className={style.images}>
                         {/* <div className={style.logoCow} style={{backgroundImage:`url(${img1})`}}>
