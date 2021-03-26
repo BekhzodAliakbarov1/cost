@@ -176,7 +176,7 @@ function Form() {
                         onChange={(e) => dispatch({type:'CHANGE_MESSAGE',payload: e.target.value})}
                     />
                     <button type="submit" onClick={openModalHandler}>Следующий</button>
-                    <Link to='/projects/RUS'>Назад</Link>
+                    <Link to='/projects/UZB'>Назад</Link>
                 </form>
             </div>
         )

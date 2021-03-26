@@ -1,0 +1,135 @@
+.main{
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    height: 100%;
+    /* padding: 40px; */
+    box-sizing: border-box;
+    display: flex;
+}
+.first{
+    padding: 10px;
+    width: 55%;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+.first .container{
+    width: 70%;
+    margin-left: 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding-top: 10%;
+}
+.card{
+    background: #fff;
+    padding: 35px 20px 30px;
+    text-align: center;
+    border-top: 3px solid #ffcd00;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+.card:hover{
+    background-color: #31353d;
+    color: #fff;
+    transition: all 1s ease;
+}
+.card:hover h1{
+    color: #fff;
+    transition: all 1s ease;
+}
+.card:hover p{
+    color: #eee;
+    transition: all 1s ease;
+}
+.card h1{
+    font-size: 12px;
+    font-family: montserrat,sans-serif;
+    font-weight: 700;
+    color: #31353d;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 13px 0 8px;
+    transition: all 1s ease;
+}
+.card p{
+    transition: all 1s ease;
+    width: 80%;
+    margin: auto;
+    font-size: 12px;
+    line-height: 18px;
+    color: #444;
+    font-family: montserrat,sans-serif;
+    padding-bottom: 10px;
+}
+.second{
+    padding: 10px;
+    width: 45%;
+    background-color: #444;
+    min-height: 50vh;
+}
+.second .container{
+    padding-top: 12%;
+    width: 60%;
+    margin-left: 10%;
+}
+.second h1{
+    font-size: 40px;
+    font-family: pt sans,sans-serif;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+}
+.second h3{
+    font-size: 15px;
+    font-family: pt sans,sans-serif;
+    color: #ffcd00;
+    font-weight: 700;
+    padding: 12px 0px;
+}
+.second p{
+    font-size: 15px;
+    line-height: 26px;
+    color: #fff;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+@media screen and (max-width:1300px){
+    .main{
+        flex-direction: column;
+    }
+    .first {
+        width: 100%;
+    }
+    .first .container{
+        grid-gap: 0px;
+        margin: auto;
+    }
+    .second{
+        width: 100%;
+    }
+    .second .container{
+        width: 90%;
+        /* margin: auto; */
+    }
+    .card{
+        margin: 10px 0px;
+    }
+}
+@media screen and (max-width:900px){
+    .first .container{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 770px){
+    .main{
+        width: 100%;
+        margin: 0px;
+    }
+}
+@media screen and (max-width:500px){
+    .first .container{
+        grid-template-columns: 1fr;
+    }
+}

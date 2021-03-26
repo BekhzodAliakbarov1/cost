@@ -5,11 +5,11 @@ import {VscChromeClose, VscMenu} from 'react-icons/vsc'
 import img from '../../assets/images/logo.png'
 
 const navbarLinks = [
-    {path:'/main/RUS', name:'Главная'},
-    {path:'/categories/RUS', name:'Категории'},
-    {path:'/booked/RUS', name:'Заказать'},
-    {path:'/tablelist/RUS', name:'Заказы'},
-    {path:'/contact/RUS', name:'Контакты'},
+    {path:'/main/UZB', name:'Асосий'},
+    {path:'/categories/UZB', name:'Категориялар'},
+    {path:'/booked/UZB', name:'Буюртма қилиш'},
+    {path:'/tablelist/UZB', name:'Заказлар'},
+    {path:'/contact/UZB', name:'Контактлар'},
 ]
 
 function Navbar() {

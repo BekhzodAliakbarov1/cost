@@ -13,7 +13,7 @@ function Main1() {
                 <h1 className={style.brend}>С НАМИ ЗАБОТ МЕНЬШЕ!</h1>
                 <div className={style.one}>
                     <div className={style.oneClick} onClick={() => setOne(!one)} style={{cursor:'pointer'}}>
-                        <h1 >Услуги</h1>
+                        <h1 >Хизматлар</h1>
                         {one ? <AiOutlineCaretUp onClick={() => setOne(!one)}/>: <AiOutlineCaretDown onClick={() => setOne(!one)}/>}
                     </div>
                     {
@@ -25,11 +25,11 @@ function Main1() {
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/електроэнергия'>Электроэнергия
+                                to='/електроэнергия'>электроЕнергия
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/связь'>Связь
+                                to='/связь'>Связ
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
@@ -37,30 +37,30 @@ function Main1() {
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/техника'>Бытовая техника (ремонт)
+                                to='/техника'>Маиший Техника
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/уборка'>Чистка / уборка
+                                to='/уборка'>Тозалаш
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/грузчик'>Перемещение (грузчик)
+                                to='/грузчик'>Юк ташиш
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/ремонт'>Мебель (ремонт/сборка)
+                                to='/ремонт'>Мебел Ремонт
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/садоводство'>Садоводство
+                                to='/садоводство'>Богъбончилик
                             </NavLink>
                         </div>
                     }
                 </div>
                 <div className={style.two}>
                     <div className={style.twoClick} onClick={() => setTwo(!two)} style={{cursor:'pointer'}}>
-                        <h1 >Транспорт и спецтехника</h1>
+                        <h1 >Транспорт ва махсус техника</h1>
                         {two ? <AiOutlineCaretUp onClick={() => setTwo(!two)}/>: <AiOutlineCaretDown onClick={() => setTwo(!two)}/>}
                     </div>
                     {
@@ -68,15 +68,15 @@ function Main1() {
                         <div className={style.twoContainer}>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/малогабаритные'>Малогабаритные грузы	
+                                to='/малогабаритные'>Кичик юк
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/крупногабаритные'>Крупногабаритные грузы
+                                to='/крупногабаритные'>Катта ҳажмдаги юк
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/автокран'>Автокран	
+                                to='/автокран'>Кўчма кран	
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
@@ -91,7 +91,7 @@ function Main1() {
                 </div>
                 <div className={style.three}>
                     <div className={style.threeClick} onClick={() => setThree(!three)} style={{cursor:'pointer'}}>
-                        <h1 >Строительство</h1>
+                        <h1 >Бино</h1>
                         {three ? <AiOutlineCaretUp onClick={() => setThree(!three)}/>: <AiOutlineCaretDown onClick={() => setThree(!three)}/>}
                     </div>
                     {
@@ -99,11 +99,11 @@ function Main1() {
                         <div className={style.threeContainer}>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/землерой'>Землерой
+                                to='/землерой'>Диггер
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/укладка'>Укладка кирпича
+                                to='/укладка'>Ғишт қуйиш
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
@@ -111,7 +111,7 @@ function Main1() {
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/штукатурка'>Штукатурка
+                                to='/штукатурка'>Гипсчи
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
@@ -119,23 +119,15 @@ function Main1() {
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/крыша'>Крыша (покрытие)
+                                to='/крыша'>том ёпиш
                             </NavLink>
                         </div>
                     }
                 </div>
-                <Link to='booked/RUS' style={{fontWeight:'800',paddingTop:'10px', cursor:'pointer',textDecoration:'none'}}>Другое</Link>
+                <Link to='booked/UZB' style={{fontWeight:'800',paddingTop:'10px', cursor:'pointer',textDecoration:'none'}}>Boshqa Turdagi</Link>
             </div>
         </div>
     )
 }
 
 export default Main1
-// Строительство
-// Землерой			
-// Укладка кирпича			
-// Косметика			
-// Штукатурка			
-// Моляр			
-// Потолочник			
-// Крыша (покрытие)			

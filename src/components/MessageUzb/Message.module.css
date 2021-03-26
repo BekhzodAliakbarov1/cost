@@ -68,8 +68,8 @@
     margin: 10px 0px;
 }
 .secondRow h2{
-    /* max-width: 30%; */
-    min-width: 150px;
+    max-width: 30%;
+    /* min-width: 170px; */
     font-size: 14px;
 }
 .thirdRow{
@@ -82,8 +82,7 @@
     margin: 10px 0px;
 }
 .thirdRow h2{
-    /* max-width: 50%; */
-    /* min-width: 170px; */
+    min-width: 150px;
     font-size: 14px;
 }
 @media screen and (max-width: 770px){

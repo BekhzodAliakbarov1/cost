@@ -81,6 +81,7 @@
     transform: translateY(5px);
     transition: all 1s ease;
 }
+
 .info{
     width: 80%;
     height: 80%;
@@ -99,7 +100,7 @@
     color: #e8e8e8;
     opacity: 0;
     transform: translateY(-5px);
-    text-decoration:none
+    text-decoration: none;
 }
 
 @media screen and (max-width:1200px){
@@ -128,10 +129,10 @@
     }
 }
 @media screen and (max-width:770px){
-    .main{
-        width: 100%;
-        margin: 0px;
-    }
+        .main{
+            width: 100%;
+            margin: 0px;
+        }
     
     .cards{
         width: 80%;

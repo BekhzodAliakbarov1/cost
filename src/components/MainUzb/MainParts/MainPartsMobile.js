@@ -33,8 +33,8 @@ const ExtraCard = () => {
                 className={Style.view}
                 >
                 <div className={Style.inMain}>
+                <h1 className={Style.brend}>С НАМИ ЗАБОТ МЕНЬШЕ!</h1>
                     <div className={Style.flexCards} >
-                    <h1 className={Style.brend}>С НАМИ ЗАБОТ МЕНЬШЕ!</h1>
                         <div className={Style.card} >
                         <div className={Style.head} onClick={first} >
                                 <h2>

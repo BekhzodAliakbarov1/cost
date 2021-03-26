@@ -15,34 +15,35 @@ function Home5() {
         {
             image: img1,
             title: 'Сантехника',
-            url:'/booked/RUS/'
+            url:'/booked/UZB/'
         },
         {
             image: img2,
-            title: 'Электроэнергия',
-            url:'/booked/RUS/'
+            title: 'электроЕнергия',
+            url:'/booked/UZB/'
         },
         {
             image: img3,
-            title: 'Бытовая техника',
-            url:'/booked/RUS/'
+            title: 'Маиший Техника',
+            url:'/booked/UZB/'
         },
         {
             image: img4,
-            title: 'Мебель ремонт',
-            url:'/booked/RUS/'
+            title: 'Тозалаш',
+            url:'/booked/UZB/'
         },
         {
             image: img5,
-            title: 'Садоводство',
-            url:'/booked/RUS/'
+            title: 'Мебел Ремонт',
+            url:'/booked/UZB/'
         },
         {
             image: img6,
-            title: 'Укладка кирпича',
-            url:'/booked/RUS/'
+            title: 'Ғишт қуйиш',
+            url:'/booked/UZB/'
         },
     ]
+
     return (
         <div className={style.main}>
             <div className={style.container}>

@@ -1,0 +1,215 @@
+.main{
+    width: calc(100%-250px);
+    min-height: 80vh;
+    box-sizing: border-box;
+    margin-left: 250px;
+    padding: 20px 0px;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.container>h1{
+    font-size: 40px;
+    font-family: pt sans,sans-serif;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    text-align: right;
+    padding-top: 20px;
+    z-index: 1;
+}
+.container>h3{
+    font-size: 20px;
+    font-family: pt sans,sans-serif;
+    color: #ffcd00;
+    font-weight: 700;
+    padding: 12px 0px;
+    text-align: right;
+    z-index: 1;
+}
+.cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 30%;
+    cursor: pointer;
+}
+.image{
+    width: 100%;
+    height: 50vh;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    transition: all 1.5s ease;
+}
+.image:hover .dark{
+    height: 100%;
+    transition: all 1.5s ease;
+}
+.image:hover h3{
+    opacity: 1;
+    transform: translateY(10px);
+    transition: all 1.5s ease;
+}
+.dark{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    background-color: black;
+    opacity: .4;
+}
+
+.image h3{
+    transition: all 1.5s ease;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+.info{
+    width: 100%;
+    height: 100%;
+    background-color: #ffcd00;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.info h1{
+    font-size: 18px;
+    font-family: open sans,sans-serif;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px;
+}
+.info h2{
+    font-size: 16px;
+    font-family: open sans,sans-serif;
+    font-weight: 300;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.button{
+    cursor: pointer;
+    display: flex;
+    /* flex-direction: column; */
+    position: relative;
+    height:40px;
+    width: 60%;
+    border: 2px solid #ffcd00;
+    font-size: 16px;
+    font-family: open sans,sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    margin:10px auto;
+    background-color: #1e2126;
+    transition: all 1.5s ease;
+}
+.background{
+    position: absolute;
+    width: 100%;
+    height: 140px;
+    background-color: #ffcd00;
+    border-radius: 50%;
+    top: -140px;
+    transition: all 1.5s ease;
+}
+.button:hover .background{
+    transform: scale(2);
+    transition: all 1.5s ease;
+}
+.button:hover{
+    border:2px solid #1e2126
+}
+.button:hover a{
+    color: #1e2126;
+    transition: all 1.5s ease;
+    font-size: 16px;
+}
+.button a{
+    text-decoration: none;
+    font-size: 16px;
+    position: absolute;
+    z-index: 1;
+    transition: all 1.5s ease;
+    color: #fff;
+}
+@media screen and (max-width:1200px){
+    /* .cards{
+        flex-direction: column;
+    } */
+    .card{
+        width: 30%;
+        margin: 10px 10px;
+    }
+}
+@media screen and (max-width:900px){
+    .cards{
+        flex-direction: column;
+        width: 50%;
+        margin: auto;
+    }
+    .image{
+        height: 50vh;
+    }
+    .card{
+        width: 100%;
+        margin: 10px auto;
+    }
+    .info h1{
+        font-size: 18px;
+    }
+    .info h2{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:600px){
+    .container{
+        width: 100%;
+    }
+    .cards{
+        width: 70%;
+    }
+    .card .image{
+        background-size: cover;
+        height: 65vh;
+    }
+}
+@media screen and (max-width:770px){
+    .main{
+        width: 100%;
+        margin: 0px;
+    }
+}
+@media screen and (max-width:500px){
+    .container{
+        width: 100%;
+    }
+    .cards{
+        width: 70%;
+    }
+    .card .image{
+        background-size: cover;
+        height: 55vh;
+    }
+}
