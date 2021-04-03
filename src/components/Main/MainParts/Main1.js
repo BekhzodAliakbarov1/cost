@@ -10,7 +10,6 @@ function Main1() {
     return (
         <div className={style.main}>
             <div className={style.container}>
-                <h1 className={style.brend}>С НАМИ ЗАБОТ МЕНЬШЕ!</h1>
                 <div className={style.one}>
                     <div className={style.oneClick} onClick={() => setOne(!one)} style={{cursor:'pointer'}}>
                         <h1 >Услуги</h1>

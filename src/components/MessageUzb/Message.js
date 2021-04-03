@@ -1,9 +1,11 @@
+/* eslint-disable no-lone-blocks */
 import React, {useState, useEffect, Fragment} from 'react';
 import api from '../../Api'
 import style from './Message.module.css'
 
 function Message() {
     const [messages, setmessages] = useState([])
+    const [input, setInput] = useState('998')
 
     useEffect(() => {
         const fetchMessages =async () => {
@@ -19,24 +21,76 @@ function Message() {
             <div className={style.container}>
                 {/* First af all we should add search bar to our site */}
                 <div className={style.table}>
-                    {
-                        messages.map((message,index) => {
-                            console.log(message);
-                            return(
-                                <Fragment key={index}>
+                        <div className={style.inputDiv} >
+                            <h4>
+                            Буюртмани телефон рақам орқали қидириш:                     
+                            </h4>
+                            <div className={style.inInput} >
+                                <form>
+                                    <input 
+                                        placeholder="Телефон рақамни киритинг"
+                                        value={input}
+                                        type="number" 
+                                        onChange={(e) => setInput(e.target.value)}/>
+                                </form>
+                            </div>
+                        </div>
+                    {messages &&
+                        messages.map(message => String(message.number).includes(`${input}`) && (
+                            <Fragment key={message.id}>
                                     <h1>{message.id}.<span>Исм:</span> {message.name}</h1>
                                     <div className={style.eachTable}>
+                                        
                                         <div className={style.firstRow}>
                                             <div className={style.container}>
                                                 {
                                                     message.orderAccepted === 'Accepted'
                                                     ? <Fragment>
-                                                        <h2><span>Статус:</span></h2>
-                                                        <h2 style={{color:'green',fontWeight:'800'}}>{message.orderAccepted}</h2>
+                                                        <h2><span>Кабул килинди:</span></h2>
+                                                        <h2 style={{color:'green',fontWeight:'900',fontSize:'20px'}}>{message.orderAccepted}</h2>
                                                     </Fragment>
                                                     :<Fragment>
-                                                        <h2><span>Статус:</span></h2>
-                                                        <h2 style={{color:'red', fontWeight:'800'}}>{message.orderAccepted}</h2>
+                                                        <h2><span>Кабул килинди:</span></h2>
+                                                        <h2 style={{color:'red', fontWeight:'900',fontSize:'20px'}}>{message.orderAccepted}</h2>
+                                                    </Fragment>
+                                                }
+                                            </div>
+                                            <div className={style.container}>
+                                                {
+                                                    message.workerSelected === 'Accepted'
+                                                    ? <Fragment>
+                                                        <h2><span>Ишчи танланди:</span></h2>
+                                                        <h2 style={{color:'green',fontWeight:'900',fontSize:'20px'}}>{message.workerSelected}</h2>
+                                                    </Fragment>
+                                                    :<Fragment>
+                                                        <h2><span>Ишчи танланди:</span></h2>
+                                                        <h2 style={{color:'red', fontWeight:'900',fontSize:'20px'}}>{message.workerSelected}</h2>
+                                                    </Fragment>
+                                                }
+                                            </div>
+                                            <div className={style.container}>
+                                                {
+                                                    message.workerGone === 'Accepted'
+                                                    ? <Fragment>
+                                                        <h2><span>Ишчи жонатилди:</span></h2>
+                                                        <h2 style={{color:'green',fontWeight:'900',fontSize:'20px'}}>{message.workerGone}</h2>
+                                                    </Fragment>
+                                                    :<Fragment>
+                                                        <h2><span>Ишчи жонатилди:</span></h2>
+                                                        <h2 style={{color:'red', fontWeight:'900',fontSize:'20px'}}>{message.workerGone}</h2>
+                                                    </Fragment>
+                                                }
+                                            </div>
+                                            <div className={style.container}>
+                                                {
+                                                    message.workerArrived === 'Accepted'
+                                                    ? <Fragment>
+                                                        <h2><span>Етиб борди:</span></h2>
+                                                        <h2 style={{color:'green',fontWeight:'900',fontSize:'20px'}}>{message.workerArrived}</h2>
+                                                    </Fragment>
+                                                    :<Fragment>
+                                                        <h2><span>Етиб борди:</span></h2>
+                                                        <h2 style={{color:'red', fontWeight:'900',fontSize:'20px'}}>{message.workerArrived}</h2>
                                                     </Fragment>
                                                 }
                                             </div>
@@ -60,8 +114,7 @@ function Message() {
                                         </div>
                                     </div>
                                 </Fragment>
-                            )
-                        })
+                        ))
                     }
                 </div>
             </div>
@@ -70,3 +123,5 @@ function Message() {
 }
 
 export default Message
+
+

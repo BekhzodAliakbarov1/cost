@@ -2,14 +2,14 @@ import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import style from './Navbar.module.css';
 import {VscChromeClose, VscMenu} from 'react-icons/vsc'
-import img from '../../assets/images/logo.png'
+import img from '../../assets/images/logo2.png'
 
 const navbarLinks = [
     {path:'/main/UZB', name:'Асосий'},
     {path:'/categories/UZB', name:'Категориялар'},
-    {path:'/booked/UZB', name:'Буюртма қилиш'},
-    {path:'/tablelist/UZB', name:'Заказлар'},
-    {path:'/contact/UZB', name:'Контактлар'},
+    {path:'/booked/UZB', name:'Буюртма'},
+    {path:'/tablelist/UZB', name:'Буюртмалар'},
+    {path:'/contact/UZB', name:'Контакт'},
 ]
 
 function Navbar() {
@@ -18,7 +18,7 @@ function Navbar() {
 
     useEffect(() => {
         const timer = setInterval(() => {
-            if(window.scrollY > 400){
+            if(window.scrollY > 200){
                 setScroll(true)
             }else{
                 setScroll(false)

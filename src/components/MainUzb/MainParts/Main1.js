@@ -10,7 +10,6 @@ function Main1() {
     return (
         <div className={style.main}>
             <div className={style.container}>
-                <h1 className={style.brend}>С НАМИ ЗАБОТ МЕНЬШЕ!</h1>
                 <div className={style.one}>
                     <div className={style.oneClick} onClick={() => setOne(!one)} style={{cursor:'pointer'}}>
                         <h1 >Хизматлар</h1>
@@ -25,11 +24,11 @@ function Main1() {
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/електроэнергия'>электроЕнергия
+                                to='/електроэнергия'>электро энергия
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/связь'>Связ
+                                to='/связь'>Алоқа
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
@@ -37,7 +36,7 @@ function Main1() {
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/техника'>Маиший Техника
+                                to='/техника'>Маиший техника
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
@@ -49,11 +48,11 @@ function Main1() {
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/ремонт'>Мебел Ремонт
+                                to='/ремонт'>Мебель таъмирлаш
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/садоводство'>Богъбончилик
+                                to='/садоводство'>Боғбончилик
                             </NavLink>
                         </div>
                     }
@@ -68,7 +67,7 @@ function Main1() {
                         <div className={style.twoContainer}>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/малогабаритные'>Кичик юк
+                                to='/малогабаритные'>Кичик ҳажмдаги юк
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
@@ -91,7 +90,7 @@ function Main1() {
                 </div>
                 <div className={style.three}>
                     <div className={style.threeClick} onClick={() => setThree(!three)} style={{cursor:'pointer'}}>
-                        <h1 >Бино</h1>
+                        <h1 >Бино ва иншоатлар</h1>
                         {three ? <AiOutlineCaretUp onClick={() => setThree(!three)}/>: <AiOutlineCaretDown onClick={() => setThree(!three)}/>}
                     </div>
                     {
@@ -119,12 +118,12 @@ function Main1() {
                             </NavLink>
                             <NavLink 
                                 activeStyle={{color: '#ffcd00'}} 
-                                to='/крыша'>том ёпиш
+                                to='/крыша'>Том ёпиш
                             </NavLink>
                         </div>
                     }
                 </div>
-                <Link to='booked/UZB' style={{fontWeight:'800',paddingTop:'10px', cursor:'pointer',textDecoration:'none'}}>Boshqa Turdagi</Link>
+                <Link to='booked/UZB' style={{fontWeight:'800',paddingTop:'10px', cursor:'pointer',textDecoration:'none'}}>Бошқа турдаги</Link>
             </div>
         </div>
     )

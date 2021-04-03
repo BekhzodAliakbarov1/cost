@@ -27,12 +27,12 @@ import Home5Uzb from './HomeUzb/HomeParts/Home5'
 
 import style from './App.module.css'
 import Home11 from './Home/HomeParts/Home11'
+import Logo from './MainNavbar/Logo'
 
 function App() {
     const [language, setLanguage] = useState('UZB')
 
     const languageRender = () => {
-        console.log('RUS time');
         return(
             <Switch>
                     <Route exact path='/'>
@@ -75,6 +75,7 @@ function App() {
                             return(
                                 <Route key={index} exact path={`${api.url}`}>
                                     <Info1
+                                        language={language}
                                         title={api.title} 
                                         firstParagraph={api.mainp}
                                         secondParagraph={api.secondp}
@@ -86,10 +87,11 @@ function App() {
                 </Switch>
         )
     }
-
-
+    
+    
     return (
         <Fragment>
+            <Logo />
             <Router>
                 {language === 'UZB' ? <NavbarUzb /> : <Navbar />}
                 <div 

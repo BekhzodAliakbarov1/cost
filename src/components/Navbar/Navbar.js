@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import style from './Navbar.module.css';
 import {VscChromeClose, VscMenu} from 'react-icons/vsc'
-import img from '../../assets/images/logo.png'
+import img from '../../assets/images/logo2.png'
 
 const navbarLinks = [
     {path:'/main/RUS', name:'Главная'},
@@ -18,7 +18,7 @@ function Navbar() {
 
     useEffect(() => {
         const timer = setInterval(() => {
-            if(window.scrollY > 400){
+            if(window.scrollY > 200){
                 setScroll(true)
             }else{
                 setScroll(false)
