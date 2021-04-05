@@ -1,7 +1,7 @@
-/* eslint-disable no-lone-blocks */
 import React, {useState, useEffect, Fragment} from 'react';
 import api from '../../Api'
 import style from './Message.module.css'
+import {BiSearchAlt2} from 'react-icons/bi'
 
 function Message() {
     const [messages, setmessages] = useState([])
@@ -35,8 +35,8 @@ function Message() {
                                 </form>
                             </div>
                         </div>
-                    {messages &&
-                        messages.map(message => String(message.number).includes(`${input}`) && (
+                    {
+                        messages.map(message=> String(message.number).includes(`${input}`) &&  (
                             <Fragment key={message.id}>
                                     <h1>{message.id}.<span>Исм:</span> {message.name}</h1>
                                     <div className={style.eachTable}>
@@ -113,8 +113,9 @@ function Message() {
                                             </div>
                                         </div>
                                     </div>
-                                </Fragment>
+                                </Fragment> 
                         ))
+                        
                     }
                 </div>
             </div>
@@ -123,5 +124,4 @@ function Message() {
 }
 
 export default Message
-
 

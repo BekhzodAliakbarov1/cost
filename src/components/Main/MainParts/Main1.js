@@ -123,7 +123,7 @@ function Main1() {
                         </div>
                     }
                 </div>
-                <Link to='booked/RUS' style={{fontWeight:'800',paddingTop:'10px', cursor:'pointer',textDecoration:'none'}}>Другое</Link>
+                <Link to='booked/RUS' style={{fontWeight:'100',fontSize:'18px',paddingTop:'10px', cursor:'pointer',textDecoration:'none'}}>Другое</Link>
             </div>
         </div>
     )

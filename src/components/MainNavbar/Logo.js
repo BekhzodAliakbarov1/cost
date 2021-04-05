@@ -13,7 +13,7 @@ function Logo() {
                 </div>
                 <div className={Style.right} >
                     <button>Персональный кабинет</button>
-                    <p>СКОРО!!!</p>
+                    <p>СКОРО</p>
                 </div>
             </div>
         </div>

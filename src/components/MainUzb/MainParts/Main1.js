@@ -123,7 +123,7 @@ function Main1() {
                         </div>
                     }
                 </div>
-                <Link to='booked/UZB' style={{fontWeight:'800',paddingTop:'10px', cursor:'pointer',textDecoration:'none'}}>Бошқа турдаги</Link>
+                <Link to='booked/UZB' style={{fontSize:'18px',fontWeight:'100',paddingTop:'10px', cursor:'pointer',textDecoration:'uppercase'}}>Бошқа турдаги</Link>
             </div>
         </div>
     )

@@ -67,6 +67,7 @@ function App() {
                                         title={api.title} 
                                         firstParagraph={api.mainp}
                                         secondParagraph={api.secondp}
+                                        language={language}
                                     />
                                 </Route>
                             )
@@ -75,10 +76,10 @@ function App() {
                             return(
                                 <Route key={index} exact path={`${api.url}`}>
                                     <Info1
-                                        language={language}
                                         title={api.title} 
                                         firstParagraph={api.mainp}
                                         secondParagraph={api.secondp}
+                                        language={language}
                                     />
                                 </Route>
                             )

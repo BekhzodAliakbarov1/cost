@@ -1,6 +1,7 @@
 import React, {useState, useEffect, Fragment} from 'react';
 import api from '../../Api'
 import style from './Message.module.css'
+import {BiSearchAlt2} from 'react-icons/bi'
 
 
 function Message() {
@@ -13,7 +14,10 @@ function Message() {
             setmessages(response.data)
         }
         fetchMessages()
-    }, [])
+    }, []) 
+
+
+    
 
     return (
         <div className={style.main}>
@@ -29,7 +33,7 @@ function Message() {
                             <div className={style.inInput} >
                                 <form>
                                     <input 
-                                        placeholder="Телефон рақамни киритинг"
+                                        placeholder="Поиск заказа по номеру телефона"
                                         value={input}
                                         type="number" 
                                         onChange={(e) => setInput(e.target.value)}/>
@@ -37,34 +41,33 @@ function Message() {
                             </div>
                         </div>
                     {   
-                        messages &&
-                        messages.map(message => String(message.number).includes(`${input}`) && (
-                                <Fragment key={message.id}>
-                                    <h1>{message.id}.<span>Имя:</span> {message.name}</h1>
-                                    <div className={style.eachTable}>
-                                        <div className={style.firstRow}>
-                                            <div className={style.container}>
-                                                {
-                                                    message.orderAccepted === 'Accepted'
-                                                    ? <Fragment>
-                                                        <h2><span>Положение дел:</span></h2>
-                                                        <h2 style={{color:'green',fontWeight:'900',fontSize:'20px'}}>{message.orderAccepted}</h2>
-                                                    </Fragment>
-                                                    :<Fragment>
-                                                        <h2><span>Положение дел:</span></h2>
-                                                        <h2 style={{color:'red', fontWeight:'900',fontSize:'20px'}}>{message.orderAccepted}</h2>
-                                                    </Fragment>
-                                                }
-                                            </div>
-                                            <div className={style.container}>
+                        messages.map(message=> String(message.number).includes(`${input}`) && (
+                            <Fragment key={message.id}>
+                            <h1>{message.id}.<span>Имя:</span> {message.name}</h1>
+                            <div className={style.eachTable}>
+                                <div className={style.firstRow}>
+                                    <div className={style.container}>
+                                        {
+                                            message.orderAccepted === 'Accepted'
+                                            ? <Fragment>
+                                                <h2><span>Положение дел:</span></h2>
+                                                <h2 style={{color:'green',fontWeight:'900',fontSize:'20px'}}>{message.workerSelected}</h2>
+                                            </Fragment>
+                                            :<Fragment>
+                                                <h2><span>Положение дел:</span></h2>
+                                                <h2 style={{color:'red', fontWeight:'900',fontSize:'20px'}}>{message.workerSelected}</h2>
+                                            </Fragment>
+                                        }
+                                    </div>
+                                    <div className={style.container}>
                                                 {
                                                     message.workerSelected === 'Accepted'
                                                     ? <Fragment>
-                                                        <h2><span>Работник выбран:</span></h2>
+                                                        <h2><span>Ишчи танланди:</span></h2>
                                                         <h2 style={{color:'green',fontWeight:'900',fontSize:'20px'}}>{message.workerSelected}</h2>
                                                     </Fragment>
                                                     :<Fragment>
-                                                        <h2><span>Работник выбран:</span></h2>
+                                                        <h2><span>Ишчи танланди:</span></h2>
                                                         <h2 style={{color:'red', fontWeight:'900',fontSize:'20px'}}>{message.workerSelected}</h2>
                                                     </Fragment>
                                                 }
@@ -73,11 +76,11 @@ function Message() {
                                                 {
                                                     message.workerGone === 'Accepted'
                                                     ? <Fragment>
-                                                        <h2><span>Работник отправлено:</span></h2>
+                                                        <h2><span>Ишчи жонатилди:</span></h2>
                                                         <h2 style={{color:'green',fontWeight:'900',fontSize:'20px'}}>{message.workerGone}</h2>
                                                     </Fragment>
                                                     :<Fragment>
-                                                        <h2><span>Работник отправлено:</span></h2>
+                                                        <h2><span>Ишчи жонатилди:</span></h2>
                                                         <h2 style={{color:'red', fontWeight:'900',fontSize:'20px'}}>{message.workerGone}</h2>
                                                     </Fragment>
                                                 }
@@ -86,37 +89,40 @@ function Message() {
                                                 {
                                                     message.workerArrived === 'Accepted'
                                                     ? <Fragment>
-                                                        <h2><span>Прибития работника:</span></h2>
+                                                        <h2><span>Етиб борди:</span></h2>
                                                         <h2 style={{color:'green',fontWeight:'900',fontSize:'20px'}}>{message.workerArrived}</h2>
                                                     </Fragment>
                                                     :<Fragment>
-                                                        <h2><span>Прибития работника:</span></h2>
+                                                        <h2><span>Етиб борди:</span></h2>
                                                         <h2 style={{color:'red', fontWeight:'900',fontSize:'20px'}}>{message.workerArrived}</h2>
                                                     </Fragment>
                                                 }
                                             </div>
-                                            <div className={style.container}>
-                                                <h2><span>Время:</span></h2>
-                                                <h2>{message.timeArrive}</h2>
-                                            </div>
-                                        </div>
-                                        <div className={style.container}>
-                                            <div className={style.secondRow}>
-                                                <h2><span>Администратор:</span> {message.adminName}</h2>
-                                                <h2><span>Имя работника :</span>{message.workerName}</h2>
-                                                <h2><span>Номер:</span>+{message.number}</h2>
-                                            </div>
-                                        </div>
-                                        <div className={style.container}>
-                                            <div className={style.thirdRow}>
-                                                <h2><span>Адрес:</span> {message.address}</h2>
-                                                <h2><span>Тип работы:</span> {message.jobType}</h2>
-                                            </div>
-                                        </div>
+
+                                    <div className={style.container}>
+                                        <h2><span>Время:</span></h2>
+                                        <h2>{message.timeArrive}</h2>
                                     </div>
-                                </Fragment>
-                            )
-                        )
+                                </div>
+                                <div className={style.container}>
+                                    <div className={style.secondRow}>
+                                        <h2><span>Администратор:</span> {message.adminName}</h2>
+                                        <h2><span>имя работника :</span>{message.workerName}</h2>
+                                        <h2><span>Номер:</span>+{message.number}</h2>
+                                    </div>
+                                </div>
+                                <div className={style.container}>
+                                    <div className={style.thirdRow}>
+                                        <h2><span>Адрес:</span> {message.address}</h2>
+                                        <h2><span>Тип работы:</span> {message.jobType}</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </Fragment>
+                        ))
+                            
+                        
+                        
                     }
                 </div>
             </div>
