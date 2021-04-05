@@ -1,7 +1,6 @@
 import React, {useState, useEffect, Fragment} from 'react';
 import api from '../../Api'
 import style from './Message.module.css'
-import {BiSearchAlt2} from 'react-icons/bi'
 
 function Message() {
     const [messages, setmessages] = useState([])
