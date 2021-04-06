@@ -90,7 +90,7 @@ function Form() {
     }
     const handleSubmition = () => {
         const csrftoken = getCookie('csrftoken');
-        const url = 'http://localhost:8000/api/message/message-create/'
+        const url = 'https://webuilder.pythonanywhere.com/api/message/message-create/'
         console.log(state);
         fetch(url, {
             method: 'POST',
